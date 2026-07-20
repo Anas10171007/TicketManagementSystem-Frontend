@@ -1,19 +1,13 @@
-type LabelProps = {
-  children: React.ReactNode;
-};
+import type { LabelHTMLAttributes } from "react";
 
-function Label({ children }: LabelProps) {
+type LabelProps = LabelHTMLAttributes<HTMLLabelElement>;
+
+function Label(props: LabelProps) {
   return (
     <label
-      className="
-        block
-        text-sm
-        font-medium
-        mb-2
-      "
-    >
-      {children}
-    </label>
+      className="mb-2 block text-sm font-medium"
+      {...props}
+    />
   );
 }
 

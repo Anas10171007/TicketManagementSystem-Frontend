@@ -8,11 +8,7 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-
-        <Route
-          path="/"
-          element={<LoginPage />}
-        />
+        <Route path="/" element={<LoginPage />} />
 
         <Route
           path="/dashboard"
@@ -23,7 +19,6 @@ function AppRouter() {
           path="*"
           element={<NotFoundPage />}
         />
-
       </Routes>
     </BrowserRouter>
   );

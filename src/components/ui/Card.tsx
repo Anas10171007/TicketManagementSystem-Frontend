@@ -1,19 +1,14 @@
+import type { ReactNode } from "react";
+
 type CardProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
-function Card({ children }: CardProps) {
+function Card({
+  children,
+}: CardProps) {
   return (
-    <div
-      className="
-        bg-surface
-        rounded-2xl
-        shadow-xl
-        border
-        border-slate-700
-        p-8
-      "
-    >
+    <div className="rounded-3xl border border-slate-700 bg-surface p-8 shadow-2xl">
       {children}
     </div>
   );

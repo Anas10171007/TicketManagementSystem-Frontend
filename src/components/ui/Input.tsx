@@ -1,24 +1,19 @@
-type InputProps = {
-  type?: string;
-  placeholder?: string;
-};
+import type { InputHTMLAttributes } from "react";
+import { cn } from "../../utils/cn";
+
+type InputProps = InputHTMLAttributes<HTMLInputElement>;
 
 function Input({
-  type = "text",
-  placeholder,
+  className,
+  ...props
 }: InputProps) {
   return (
     <input
-      type={type}
-      placeholder={placeholder}
-      className="
-        w-full
-        p-3
-        rounded-lg
-        border
-        border-slate-600
-        bg-slate-800
-      "
+      className={cn(
+        "w-full rounded-xl border border-slate-700 bg-surface px-4 py-3 outline-none transition-all duration-200 placeholder:text-text-muted focus:border-primary",
+        className
+      )}
+      {...props}
     />
   );
 }
